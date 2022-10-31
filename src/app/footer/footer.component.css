@@ -1,0 +1,10 @@
+.row{
+    background-color: transparent;
+}
+
+footer {
+    color: #fff;
+    font-size: 14px;
+    display:flex;
+    text-align: left;
+}
