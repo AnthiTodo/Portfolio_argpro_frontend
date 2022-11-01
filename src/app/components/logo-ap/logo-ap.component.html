@@ -1,0 +1,47 @@
+<script src="https://kit.fontawesome.com/8028163f29.js" crossorigin="anonymous"></script>
+    
+
+
+<div class="container_barrasup">
+    <button class="argprologo"> 
+            <a href="https://www.argentina.gob.ar/economia/conocimiento/argentina-programa"></a> <img  src="../../../assets/AP_LogoSmall.png" id="AP_Logo"> 
+    </button>
+
+    <div class="icons">
+        <button class="button"> 
+            <i class="fa-brands fa-instagram fa-2xl"></i>    
+        </button>
+    
+        <button class="button">
+            <i class="fa-brands fa-linkedin fa-2xl"></i> 
+        </button>
+    
+        <button class="button"> 
+            <i class="fa-brands fa-github fa-2xl"></i> 
+        </button>
+    
+        <button class="button">
+            <i class="fa-solid fa-envelope fa-2xl"></i>
+        </button>
+    </div>
+
+    <button type="button" class="btn btn-outline-light" (click)="login()" *ngIf="!isLogged">INGRESO</button>
+            <button type="button" class="btn btn-outline-light" (click)="onLogOut()" *ngIf="isLogged">CERRAR SESION</button>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

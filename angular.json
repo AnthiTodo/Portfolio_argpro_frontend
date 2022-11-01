@@ -1,11 +1,18 @@
 {
   "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
+  "cli": {
+    "analytics": false
+  },
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "Portfolio_argpro": {
+    "proyectoFinal": {
       "projectType": "application",
-      "schematics": {},
+      "schematics": {
+        "@schematics/angular:application": {
+          "strict": true
+        }
+      },
       "root": "",
       "sourceRoot": "src",
       "prefix": "app",
@@ -13,7 +20,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/portfolio-argpro",
+            "outputPath": "dist/proyecto-final",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -23,10 +30,11 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.css","Portfolio_argpro/node_modules/bootstrap/dist/css/bootstrap.css"
+              "src/styles.css",
+              "node_modules/bootstrap/dist/css/bootstrap.css"
             ],
             "scripts": [
-              "Portfolio_argpro/node_modules/bootstrap/dist/js/bootstrap.js"
+              "node_modules/bootstrap/dist/js/bootstrap.js"
             ]
           },
           "configurations": {
@@ -66,10 +74,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "Portfolio_argpro:build:production"
+              "browserTarget": "proyectoFinal:build:production"
             },
             "development": {
-              "browserTarget": "Portfolio_argpro:build:development"
+              "browserTarget": "proyectoFinal:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -77,7 +85,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "Portfolio_argpro:build"
+            "browserTarget": "proyectoFinal:build"
           }
         },
         "test": {
@@ -92,6 +100,7 @@
               "src/assets"
             ],
             "styles": [
+              "../node_modules/bootstrap/dist/css/bootstrap.min.css",
               "src/styles.css"
             ],
             "scripts": []
@@ -100,7 +109,5 @@
       }
     }
   },
-  "cli": {
-    "analytics": "ee122d12-bbc5-4390-9387-cc2de8c71d17"
-  }
+  "defaultProject": "proyectoFinal"
 }
